@@ -16,6 +16,24 @@ class HomePageState extends State<HomePage> {
         title: Text('Nome da página'),
         actions: [CustomSwitch()],
       ),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: 50,
+                height: 50,
+                color: Colors.black,
+              ),
+              Container(
+                width: 75,
+                height: 50,
+                color: Colors.amberAccent,
+              )
+            ]),
+      ),
     );
   }
 }

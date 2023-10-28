@@ -1,3 +1,4 @@
+import 'package:aprendendo_flutter/app_controller.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -8,8 +9,6 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
-  int counter = 77;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,19 +16,12 @@ class HomePageState extends State<HomePage> {
         title: Text('Nome da página'),
       ),
       body: Center(
-        child: Text(
-          'Clicks: $counter',
-          style: TextStyle(fontSize: 32),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          setState(() {
-            counter++;
-          });
-        },
-      ),
+          child: Switch(
+        value: AppController.instance.isDarkTheme,
+        onChanged: ((value) {
+          AppController.instance.changeTheme();
+        }),
+      )),
     );
   }
 }

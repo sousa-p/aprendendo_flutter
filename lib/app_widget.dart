@@ -1,5 +1,5 @@
 import 'package:aprendendo_flutter/app_controller.dart';
-import 'package:aprendendo_flutter/home_page.dart';
+import 'package:aprendendo_flutter/login_page.dart';
 import 'package:flutter/material.dart';
 
 class AppWidget extends StatelessWidget {
@@ -13,9 +13,9 @@ class AppWidget extends StatelessWidget {
                   primarySwatch: Colors.blueGrey,
                   brightness: AppController.instance.isDarkTheme
                       ? Brightness.dark
-                      : Brightness.light
-                  ),
-              home: HomePage());
+                      : Brightness.light),
+              home: LoginPage()
+            );
         });
   }
 }

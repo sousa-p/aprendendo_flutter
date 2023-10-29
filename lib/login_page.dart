@@ -15,18 +15,17 @@ class LoginPage extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Padding(
-            padding: EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: 200,
-                  height: 200,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Image.network('https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png'),
-                  )
-                ),
+                    width: 200,
+                    height: 200,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset('assets/images/tux.png'),
+                    )),
                 TextField(
                   onChanged: (text) {
                     email = text;

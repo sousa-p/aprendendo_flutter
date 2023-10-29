@@ -58,13 +58,13 @@ class LoginPage extends StatelessWidget {
                           vertical: 10,
                         ),
                       ),
-                      
                       SizedBox(
                         width: 150,
                         height: 50,
                         child: ElevatedButton(
                             onPressed: () {
-                              Navigator.of(context).pushReplacementNamed('/home');
+                              Navigator.of(context)
+                                  .pushReplacementNamed('/home');
                             },
                             child: const Text('Entrar')),
                       ),
